@@ -244,7 +244,7 @@ if bandplot:
 plt.show()
 
 #%%%%%%%%%%%%%%%%%%%
-# Simultaneous optimization using iteration
+# Simultaneous optimization using iteration from Tight binding model
 
 from scipy.optimize import curve_fit
 
