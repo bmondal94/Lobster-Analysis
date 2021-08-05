@@ -243,6 +243,7 @@ if bandplot:
 
 plt.show()
 
+'''
 #%%%%%%%%%%%%%%%%%%%
 # Simultaneous optimization using iteration from Tight binding model
 
@@ -589,3 +590,4 @@ for I in range(4):
 
 #plt.legend()
 #===============================================================================
+'''
