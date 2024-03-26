@@ -1,0 +1,42 @@
+# For GaAs
+COHPstartEnergy  -14
+COHPendEnergy	 +10
+
+#loadProjectionFromFile
+basisSet pbeVaspFit2015
+basisfunctions Ga 4s 4p 3d
+basisfunctions As 4s 4p 3d
+autorotate
+#basisrotation 1 0 0 45
+cohpbetween atom 1 and atom 2
+gaussianSmearingWidth 0.01
+
+# L-point
+#printPAWRealSpaceWavefunction kpoint 1332 coordinates 0 0 0 coordinates 1 1 1 box pointsPerAngstrom 25 bandlist 15
+#printLCAORealSpaceWavefunction kpoint 1332 coordinates 0 0 0 coordinates 1 1 1 box pointsPerAngstrom 25 bandlist 15
+# D_m point
+#printPAWRealSpaceWavefunction kpoint 1405 coordinates 0 0 0 coordinates 1 1 1 box pointsPerAngstrom 25 bandlist 15
+#printLCAORealSpaceWavefunction kpoint 1405 coordinates 0 0 0 coordinates 1 1 1 box pointsPerAngstrom 25 bandlist 15
+# X point
+#printPAWRealSpaceWavefunction kpoint 1412 coordinates 0 0 0 coordinates 1 1 1 box pointsPerAngstrom 10 bandlist 15
+#printLCAORealSpaceWavefunction kpoint 1412 coordinates 0 0 0 coordinates 1 1 1 box pointsPerAngstrom 25 bandlist 15
+# G-point
+#printPAWRealSpaceWavefunction kpoint 1491 coordinates 0 0 0 coordinates 1 1 1 box pointsPerAngstrom 30 bandlist 14 15
+#printPAWRealSpaceWavefunction kpoint 1 atom 1 atom 2 stretchLine box pointsPerAngstrom 20 bandlist 15
+#printLCAORealSpaceWavefunction kpoint 1491 coordinates 0 0 0 coordinates 1 1 1 box pointsPerAngstrom 25 bandlist 14 15
+
+kSpaceCOHP
+RMSp
+
+writeBasisFunctions
+createFatband Ga 4s 4p 3d
+createFatband As 4s 4p 3d
+
+saveProjectionToFile
+
+#skipDOS
+#skipCOOP
+#skipCOHP
+#skipPopulationAnalysis
+#skipGrossPopulation
+#skipProjection
